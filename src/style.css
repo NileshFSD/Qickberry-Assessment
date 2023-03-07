@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.registration-from {
+  @apply text-[2rem] uppercase font-medium;
+}
+
+.login-container {
+  @apply w-screen h-screen  flex flex-col justify-center items-center;
+}
+
+.form {
+  @apply w-[18rem] h-fit flex flex-col gap-6 shadow-[0px_5px_10px_black] text-left leading-6 p-6 rounded-2xl;
+}
+
+.form div {
+  @apply flex flex-col;
+}
+
+@screen md {
+  .form {
+    @apply w-[23rem];
+  }
+}
+
+.submit {
+  @apply bg-[rgb(31,71,218)] text-[white] px-2 py-[0.7rem];
+}
+input {
+  @apply h-10 p-2;
+}
+
+.link {
+  @apply text-[blue] underline cursor-pointer;
+}
+
+/* -----------------------------DashBoard-------------- */
+
+.dashboard {
+  @apply w-screen h-screen bg-[white] flex flex-col flex-wrap justify-center items-center gap-8;
+}
+
+.dashboard div {
+  @apply w-80  shadow-[0px_1px_10px_black]  text-[1.5rem] p-8 rounded-2xl;
+  text-transform: capitalize;
+}
+
+.logOut-btn {
+  @apply bg-[rgb(31,71,218)] text-[white] px-2 py-[0.7rem] absolute right-[5%] top-[8%];
+}
+
+.post-container {
+  @apply flex flex-col gap-8 p-12;
+}
+.post {
+  @apply w-[40rem] shadow-[0px_0px_10px_black] h-fit text-left px-8 py-6 rounded-2xl;
+}
+.post-title {
+  @apply text-2xl font-semibold first-letter:capitalize;
+}
+
+.post-title::first-letter,
+.photo-title::first-letter {
+  text-transform: capitalize;
+}
+.post-card-container {
+  @apply w-full h-full flex flex-row flex-wrap gap-8 justify-center;
+}
+
+.photo-container {
+  @apply flex flex-col gap-8 p-12;
+}
+
+.photo-card-container {
+  @apply w-full h-full flex flex-row flex-wrap gap-8 justify-center;
+}
+
+.photo-card {
+  @apply w-60 h-fit px-2 py-4 shadow-[0px_0px_10px_black] h-80 text-left rounded-2xl;
+}
+
+.photo {
+  @apply w-full;
+}
+
+.photo img {
+  @apply w-full;
+}
+
+.pagination {
+  @apply flex flex-row gap-[0.3rem] w-full justify-center p-2;
+}
+
+.page-items {
+  @apply bg-[lightblue] w-8 px-0 py-[0.1rem];
+}
+.page-item {
+  @apply bg-[lightblue];
+}
+
+.active {
+  @apply bg-[rgb(31,71,218)] text-[white];
+}
+
+.error {
+  @apply w-screen h-screen flex flex-col justify-center items-center text-5xl;
+}
+
+.spinner {
+  @apply w-screen h-screen absolute flex flex-col justify-center items-center left-[0%] top-[0%];
+}
